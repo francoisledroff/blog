@@ -1,0 +1,12 @@
+= About the author
+Francois Le Droff
+2016-01-16
+:jbake-type: page
+:jbake-tags: groovy, hibernate, java, open, TODO
+:jbake-status: published
+:source-highlighter: prettify
+
+TODO
+
+
+
