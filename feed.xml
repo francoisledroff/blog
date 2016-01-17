@@ -6,134 +6,290 @@
     <atom:link href="http://francoisledroff.github.io/blog//feed.xml" rel="self" type="application/rss+xml" />
     <description>Francois Le Droff's feed</description>
     <language>en-gb</language>
-    <pubDate>Sun, 17 Jan 2016 00:46:43 +0100</pubDate>
-    <lastBuildDate>Sun, 17 Jan 2016 00:46:43 +0100</lastBuildDate>
+    <pubDate>Sun, 17 Jan 2016 21:29:22 +0100</pubDate>
+    <lastBuildDate>Sun, 17 Jan 2016 21:29:22 +0100</lastBuildDate>
 
+    <item>
+      <title>An AEM/CQ SalesForce integration Sample</title>
+      <link>http://francoisledroff.github.io/blog/content/2014/12/04/an_aem_cq_salesforce_integration.html</link>
+      <pubDate>Thu, 4 Dec 2014 00:00:00 +0100</pubDate>
+      <guid isPermaLink="false">content/2014/12/04/an_aem_cq_salesforce_integration.html</guid>
+      	<description>
+	&lt;div id=&quot;preamble&quot;&gt;
+&lt;div class=&quot;sectionbody&quot;&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;I recently published on github some code we used for an Adobe IT internal AEM/CQ based app: This could help you integrating SalesForce REST API ( and SOQL queries) into your CQ/AEM instance.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;For now it only supports AEM/CQ 5.5, but I welcome pull request, as well as feedback, bug fix, bug reports and comments &lt;span class=&quot;image&quot;&gt;&lt;img src=&quot;http://www.jroller.com/images/smileys/wink.gif&quot; alt=&quot;;-)&quot; title=&quot;;-)&quot;&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;Cf. link:[&lt;a href=&quot;https://github.com/francoisledroff/force-cq&quot;&gt;https://github.com/francoisledroff/force-cq&lt;/a&gt;]&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+	</description>
+    </item>
+    <item>
+      <title>Chef metal experimentations: AEM test drive</title>
+      <link>http://francoisledroff.github.io/blog/content/2014/07/29/chef_metal_experimentations_aem_test.html</link>
+      <pubDate>Tue, 29 Jul 2014 00:00:00 +0200</pubDate>
+      <guid isPermaLink="false">content/2014/07/29/chef_metal_experimentations_aem_test.html</guid>
+      	<description>
+	&lt;div id=&quot;preamble&quot;&gt;
+&lt;div class=&quot;sectionbody&quot;&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;I’ve been recently playing with &lt;a href=&quot;https://github.com/opscode/chef-metal&quot;&gt;chef-metal&lt;/a&gt;. Chef-metal Rocks, it allows you to treat machines/nodes like resources and provision them through &lt;a href=&quot;https://github.com/opscode/chef-metal-vagrant&quot;&gt;vagrant provisioner&lt;/a&gt;, &lt;a href=&quot;https://github.com/opscode/chef-metal-fog&quot;&gt;EC2, Rackspace, DigitalOcean and Openstack provisioner&lt;/a&gt; and even &lt;a href=&quot;https://github.com/opscode/chef-metal-docker&quot;&gt;docker provisioner&lt;/a&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;&lt;span class=&quot;image&quot;&gt;&lt;img src=&quot;http://www.bobcroslin.com/blog/wp-content/uploads/2011/08/orlando-photographer-bob-croslin-black-metal-vegan-chef-time-2.jpg&quot; alt=&quot;Chef Metal&quot; width=&quot;200&quot;&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;I just &lt;a href=&quot;https://github.com/francoisledroff/connectcon-chef-repo#aem-chef-test-drive&quot;&gt;published my latest experimentations on github&lt;/a&gt; today I added a chef-metal based cookbook in my connectcon chef repo, this will allow you to have an AEM (Adobe Experience Manager) infrastructure fully configured in matter of minutes using a vagrant provisionner.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;Even if you are new to Ruby and Chef, the test drive should take you a few minutes:&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;ulist&quot;&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;install &lt;a href=&quot;https://www.vagrantup.com/downloads&quot;&gt;vagrant&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;install ruby with &lt;a href=&quot;https://rvm.io/&quot;&gt;rvm&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;install &lt;a href=&quot;http://bundler.io/&quot;&gt;bundler&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;checkout this git &lt;a href=&quot;https://github.com/francoisledroff/connectcon-chef-repo&quot;&gt;chef-repo&lt;/a&gt; to your disk&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;edit the &lt;a href=&quot;https://github.com/francoisledroff/connectcon-chef-repo/blob/master/environments/dev.json#L11&quot;&gt;dev.json&lt;/a&gt; environment file in order to have the &lt;code&gt;download_url&lt;/code&gt; and &lt;code&gt;license_url&lt;/code&gt; pointing to reachable aem jar and license URLs within your network&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;change directory to the root of the local copy of this git repo&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;launch our ./local_setup.sh&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;Except for vagrant installation all the above can be boiled down to the following commmand lines:&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;literalblock&quot;&gt;
+&lt;div class=&quot;content&quot;&gt;
+&lt;pre&gt;curl -sSL https://get.rvm.io | bash -s stable
+gem install bundler
+git clone https://github.com/francoisledroff/connectcon-chef-repo.git
+cd connectcon-chef-repo
+./local_setup.sh&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;A few minutes later you will have a centos vm running on a local IP (&lt;a href=&quot;https://github.com/francoisledroff/connectcon-chef-repo/blob/master/cookbooks/aem_metal/recipes/author.rb#L11&quot;&gt;set up in our aem-metal default recipe&lt;/a&gt;) If this &lt;a href=&quot;http://en.wikipedia.org/wiki/Private_network&quot;&gt;private range IP&lt;/a&gt; is in used pick another one, just change the recipe file.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;The vm is created by default under &lt;code&gt;.chef/vms&lt;/code&gt; . From there, you can ssh in, and then double check aem service is started and eventually stop the firewall to freely access this chef automated cq author instance from your browser at &lt;a href=&quot;http://192.168.0.20:4502&quot;&gt;http://192.168.0.20:4502&lt;/a&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;literalblock&quot;&gt;
+&lt;div class=&quot;content&quot;&gt;
+&lt;pre&gt;$ cd .chef/vms
+$ vagrant ssh
+Last login: Tue Jul 15 16:44:19 2014 from 10.0.2.2
+Welcome to your Vagrant-built virtual machine.
+[vagrant@author ~]$ sudo service service aem-author status
+[vagrant@author ~]$ sudo service iptables stop&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;sect2&quot;&gt;
+&lt;h3 id=&quot;whats-next&quot;&gt;What’s next ?&lt;/h3&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;If my agenda allows it, I hope I could demo here as well:&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;ulist&quot;&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;how this vagrant provisioner could be replaced by a &lt;a href=&quot;https://github.com/opscode/chef-metal-docker&quot;&gt;docker provisioner&lt;/a&gt; or a &lt;a href=&quot;https://github.com/opscode/chef-metal-fog&quot;&gt;EC2, Rackspace, DigitalOcean and Openstack provisioner&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;how to secure the automation with &lt;a href=&quot;https://github.com/Nordstrom/chef-vault&quot;&gt;chef-vault&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;how to set up a few typical aem infrastructures (more complex than just this author instance I have for now) as presented in &lt;a href=&quot;http://www.slideshare.net/francoisledroff/master-chef-class-learn-how-to-quickly-cook-delightful-cqaem-infrastructures&quot;&gt;my slides&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;Any feedback will be appreciated.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+	</description>
+    </item>
+    <item>
+      <title>Back from Basel</title>
+      <link>http://francoisledroff.github.io/blog/content/2014/07/03/back_from_basel.html</link>
+      <pubDate>Thu, 3 Jul 2014 00:00:00 +0200</pubDate>
+      <guid isPermaLink="false">content/2014/07/03/back_from_basel.html</guid>
+      	<description>
+	&lt;div id=&quot;preamble&quot;&gt;
+&lt;div class=&quot;sectionbody&quot;&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;ConnectCon (formerly known as CQCon) took place last week in Basel. It was great to connect with the CQ/AEM developers community.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;I posted the slidedeck of the talk I gave with Nicolas on slideshare: &lt;a href=&quot;http://www.slideshare.net/francoisledroff/master-chef-class-learn-how-to-quickly-cook-delightful-cqaem-infrastructures&quot;&gt;Master Chef class: learn how to quickly cook delightful AEM infrastructures&lt;/a&gt;.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;&lt;span class=&quot;image&quot;&gt;&lt;img src=&quot;https://lh4.googleusercontent.com/-u313OiVvg-A/U7EmmKLG6-I/AAAAAAAAWd8/NaeZ0ZD1cQ4/w346-h615/20140625_125247-EFFECTS.jpg&quot; alt=&quot;Basel&quot;&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;And here are a few more pointers to the connectCon talks I particularly enjoyed:&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;ulist&quot;&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&quot;http://www.slideshare.net/bdelacretaz/its-just-a-web-server-a-plea-for-simplicity&quot;&gt;It’s just a Web server - a plea for simplicity&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&quot;http://www.connectcon.ch/content/dam/connectWE/Presentation_Pazik_Tilburg.pdf&quot;&gt;Adobe Managed Services: Managing and maintaining AEM in AWS&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&quot;https://docs.google.com/presentation/d/1wvg4IwlCW0X6ZmEb3Si-RdCwtBaEe9gNgcafMc4R-6U/edit#slide=id.p&quot;&gt;Third-Party Libraries and OSGi – a complicated relationship&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&quot;http://www.connectcon.ch/content/dam/connectWE/Presentation_Ben_Zahler.pdf&quot;&gt;Oak for developers: What’s new?&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&quot;http://www.connectcon.ch/content/dam/connectWE/Presentation_Antonio_Sanso.pdf&quot;&gt;OAuth Server functionality in AEM&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&quot;http://www.connectcon.ch/content/dam/connectWE/Presentation_Tas_Walt.pdf&quot;&gt;Sightly Component Development&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&quot;http://brucelefebvre.com/slides/connectwebex-aem-apps/#/&quot;&gt;Mobile apps: Made and managed in AEM&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&quot;http://www.connectcon.ch/content/dam/connectWE/Presentation_Anthony_Rumsey.pdf&quot;&gt;Delivering Managed Content to Your Native Apps&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;FYI: The next big cq/aem community event will be in San Diego this year : &lt;a href=&quot;http://www.evolve14.com/home.html&quot;&gt;Evolve’14&lt;/a&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+	</description>
+    </item>
+    <item>
+      <title>Master Chef class: learn how to quickly cook delightful CQ/AEM infrastructures</title>
+      <link>http://francoisledroff.github.io/blog/content/2014/05/13/master_chef_class_learn_how.html</link>
+      <pubDate>Tue, 13 May 2014 00:00:00 +0200</pubDate>
+      <guid isPermaLink="false">content/2014/05/13/master_chef_class_learn_how.html</guid>
+      	<description>
+	&lt;div id=&quot;preamble&quot;&gt;
+&lt;div class=&quot;sectionbody&quot;&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;As a follow-up of my talk at Devoxx France, I plan to speak at &lt;a href=&quot;http://www.connectcon.ch/&quot;&gt;Connect Con&lt;/a&gt; in Basel the 25th and 26th of June.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;This time I’ll do the talk with &lt;a href=&quot;https://twitter.com/npeltier&quot;&gt;Nicolas Peltier&lt;/a&gt;, again it will be about my new luddite practice: Chef Automation, but this time focused on CQ/Adobe Experience Manager automation.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;&lt;span class=&quot;image&quot;&gt;&lt;img src=&quot;https://dev.day.com/content/docs/en/cq/current/deploying/installing_cq/_jcr_content/par/procedure_1/proc_par/step_0/step_par/image.img.png/1358405103637.png&quot; alt=&quot;aem&quot;&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;The objective we set for ourselves is the following: show you how to start from bare metal - virtual, physical or cloud - servers and turn them, in matter of minutes, into a production ready CQ6 infrastructure.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;Think author and publish farms of servers with optional SSL, dispatcher, and clustering with MongoDB.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;Meanwhile you’ll be given a comprehensive overview of Chef resources and techniques enabling you to accelerate, scale up, simplify and secure your development and release workflow.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;&lt;span class=&quot;image&quot;&gt;&lt;img src=&quot;http://www.datacenterdynamics.com/sites/default/files/Chef.jpg&quot; alt=&quot;chef&quot;&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;Until then if you have experience with Chef and CQ/AEM, don’t hesitate to drop me a comment/email to exchange on the subject.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+	</description>
+    </item>
+    <item>
+      <title>Master Chef &amp;amp; Puppet Show and other Devops pointers from Devoxx France 2014</title>
+      <link>http://francoisledroff.github.io/blog/content/2014/05/05/master_chef_puppet_show_and.html</link>
+      <pubDate>Mon, 5 May 2014 00:00:00 +0200</pubDate>
+      <guid isPermaLink="false">content/2014/05/05/master_chef_puppet_show_and.html</guid>
+      	<description>
+	&lt;div id=&quot;preamble&quot;&gt;
+&lt;div class=&quot;sectionbody&quot;&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;Devoxx france 2014 was an excellent vintage. The conference was packed with 1500 passionate developers. I had the privilege to speak, hence, unlike last year, I did not see much of the show. The first 2 days I mainly spent my time rehearsing and networking.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;Here is the link to the 40mn presentation &lt;a href=&quot;https://twitter.com/rpelisse&quot;&gt;Romain&lt;/a&gt; and I did: &lt;a href=&quot;http://francoisledroff.github.io/chezlesbarbus/#1&quot;&gt;Master Chef &amp;amp; Puppet Show&lt;/a&gt; The video will be soon available on &lt;a href=&quot;http://parleys.com/&quot;&gt;parleys&lt;/a&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;&lt;span class=&quot;image&quot;&gt;&lt;img src=&quot;http://www.jroller.com/francoisledroff/resource/Devoxx-XEBIA_369.JPG&quot; alt=&quot;image&quot;&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;The talk was fun to prepare and run, the feedback we received was awesome. It was worth the effort. Romain and I agreed we should do this more often. We Immortalized this moment with a few friends at the Xebia photo booth.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;I spent the 3rd and last day of the conference with a cool devops gang, those guys named themself &lt;a href=&quot;http://www.devopsmercenaries.org/&quot;&gt;Devops Mercenaries&lt;/a&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;Here are some of my notes (stuff I need to look at when my time and priority will allow it):&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;ulist&quot;&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;look at ThoughtWorks’ Continuous Delivery platform, Go &lt;a href=&quot;http://www.thoughtworks.com/news/go-continuous-delivery-now-available-as-free-open-source&quot;&gt;as it’s been Open Sourced&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Give a try to &lt;a href=&quot;http://capistranorb.com/&quot;&gt;capistrano&lt;/a&gt; as a remote server automation and deployment tool (triggered by Jenkins)&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;try to understand &lt;a href=&quot;http://zookeeper.apache.org/&quot;&gt;zookeeper&lt;/a&gt; use case&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Generate code coverage report with &lt;a href=&quot;https://github.com/sethvargo/chefspec#reporting&quot;&gt;ChefSpec&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;have a closer look at &lt;a href=&quot;http://serverspec.org/&quot;&gt;serverspec&lt;/a&gt;, and eventually use it to audit (through serverspec logs) the automated servers&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;segregate 3 types of jenkins servers: one for build (soft factory), one for QA (quality factory with Selenium, Gatling …), one for delivery/deployment&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;use jenkins to launch chef automated vm and run automated integration test on these&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Do better measuring and monitoring (key to devops adoption and sponsors buy in), have a look at &lt;a href=&quot;http://www.zabbix.com/&quot;&gt;Zabbix&lt;/a&gt;, JMX, &lt;a href=&quot;http://collectd.org/&quot;&gt;Collectd&lt;/a&gt;, &lt;a href=&quot;http://graphite.wikidot.com/&quot;&gt;Graphite&lt;/a&gt;, &lt;a href=&quot;https://code.google.com/p/javamelody/&quot;&gt;javamelody&lt;/a&gt;, &lt;a href=&quot;http://rashidkpc.github.io/Kibana/&quot;&gt;kibana&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Measure slack time: time allocated for devops&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Do &lt;a href=&quot;http://martinfowler.com/bliki/BlueGreenDeployment.html&quot;&gt;Blue green deployment&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;nosql is helping continuous deployment, sql db automation such as liquibase and flyway do it too.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;shut down the db, without shutting down the service, that’s key too: cf &lt;a href=&quot;https://github.com/Netflix/zuul/wiki&quot;&gt;Netfliz zuul&lt;/a&gt; solution&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+	</description>
+    </item>
 
-on line 12, column 28 in feed.ftl
-Left side index of range out of bounds, is 0, but the sequence has only 0 element(s) (note that indices are 0 based, and ranges are inclusive).
-The problematic instruction:
-----------
-==> list published_posts[0..4] as post [on line 12, column 5 in feed.ftl]
-----------
-
-Java backtrace for programmers:
-----------
-freemarker.template.TemplateException: on line 12, column 28 in feed.ftl
-Left side index of range out of bounds, is 0, but the sequence has only 0 element(s) (note that indices are 0 based, and ranges are inclusive).
-	at freemarker.core.DynamicKeyName.dealWithRangeKey(DynamicKeyName.java:168)
-	at freemarker.core.DynamicKeyName._getAsTemplateModel(DynamicKeyName.java:77)
-	at freemarker.core.Expression.getAsTemplateModel(Expression.java:89)
-	at freemarker.core.IteratorBlock.accept(IteratorBlock.java:94)
-	at freemarker.core.Environment.visit(Environment.java:221)
-	at freemarker.core.MixedContent.accept(MixedContent.java:92)
-	at freemarker.core.Environment.visit(Environment.java:221)
-	at freemarker.core.Environment.process(Environment.java:199)
-	at freemarker.template.Template.process(Template.java:259)
-	at org.jbake.template.FreemarkerTemplateEngine.renderDocument(FreemarkerTemplateEngine.java:65)
-	at org.jbake.template.DelegatingTemplateEngine.renderDocument(DelegatingTemplateEngine.java:60)
-	at org.jbake.app.Renderer.renderFeed(Renderer.java:179)
-	at org.jbake.app.Oven.bake(Oven.java:161)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:497)
-	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:90)
-	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:233)
-	at org.codehaus.groovy.runtime.metaclass.ClosureMetaClass.invokeMethod(ClosureMetaClass.java:361)
-	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:877)
-	at org.codehaus.groovy.runtime.callsite.PogoMetaClassSite.callCurrent(PogoMetaClassSite.java:66)
-	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallCurrent(CallSiteArray.java:46)
-	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:133)
-	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:137)
-	at me.champeau.gradle.JBakeTask$_bake_closure1.doCall(JBakeTask.groovy:38)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:497)
-	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:90)
-	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:233)
-	at org.codehaus.groovy.runtime.metaclass.ClosureMetaClass.invokeMethod(ClosureMetaClass.java:272)
-	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:877)
-	at groovy.lang.Closure.call(Closure.java:412)
-	at groovy.lang.Closure.call(Closure.java:425)
-	at org.codehaus.groovy.runtime.DefaultGroovyMethods.with(DefaultGroovyMethods.java:193)
-	at org.codehaus.groovy.runtime.dgm$897.invoke(Unknown Source)
-	at org.codehaus.groovy.runtime.callsite.PojoMetaMethodSite$PojoMetaMethodSiteNoUnwrapNoCoerce.invoke(PojoMetaMethodSite.java:271)
-	at org.codehaus.groovy.runtime.callsite.PojoMetaMethodSite.call(PojoMetaMethodSite.java:53)
-	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:42)
-	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:108)
-	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:116)
-	at me.champeau.gradle.JBakeTask.bake(JBakeTask.groovy:35)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:497)
-	at org.gradle.internal.reflect.JavaMethod.invoke(JavaMethod.java:63)
-	at org.gradle.api.internal.project.taskfactory.AnnotationProcessingTaskFactory$StandardTaskAction.doExecute(AnnotationProcessingTaskFactory.java:219)
-	at org.gradle.api.internal.project.taskfactory.AnnotationProcessingTaskFactory$StandardTaskAction.execute(AnnotationProcessingTaskFactory.java:212)
-	at org.gradle.api.internal.project.taskfactory.AnnotationProcessingTaskFactory$StandardTaskAction.execute(AnnotationProcessingTaskFactory.java:201)
-	at org.gradle.api.internal.AbstractTask$TaskActionWrapper.execute(AbstractTask.java:530)
-	at org.gradle.api.internal.AbstractTask$TaskActionWrapper.execute(AbstractTask.java:513)
-	at org.gradle.api.internal.tasks.execution.ExecuteActionsTaskExecuter.executeAction(ExecuteActionsTaskExecuter.java:80)
-	at org.gradle.api.internal.tasks.execution.ExecuteActionsTaskExecuter.executeActions(ExecuteActionsTaskExecuter.java:61)
-	at org.gradle.api.internal.tasks.execution.ExecuteActionsTaskExecuter.execute(ExecuteActionsTaskExecuter.java:46)
-	at org.gradle.api.internal.tasks.execution.PostExecutionAnalysisTaskExecuter.execute(PostExecutionAnalysisTaskExecuter.java:35)
-	at org.gradle.api.internal.tasks.execution.SkipUpToDateTaskExecuter.execute(SkipUpToDateTaskExecuter.java:64)
-	at org.gradle.api.internal.tasks.execution.ValidatingTaskExecuter.execute(ValidatingTaskExecuter.java:58)
-	at org.gradle.api.internal.tasks.execution.SkipEmptySourceFilesTaskExecuter.execute(SkipEmptySourceFilesTaskExecuter.java:42)
-	at org.gradle.api.internal.tasks.execution.SkipTaskWithNoActionsExecuter.execute(SkipTaskWithNoActionsExecuter.java:52)
-	at org.gradle.api.internal.tasks.execution.SkipOnlyIfTaskExecuter.execute(SkipOnlyIfTaskExecuter.java:53)
-	at org.gradle.api.internal.tasks.execution.ExecuteAtMostOnceTaskExecuter.execute(ExecuteAtMostOnceTaskExecuter.java:43)
-	at org.gradle.api.internal.AbstractTask.executeWithoutThrowingTaskFailure(AbstractTask.java:286)
-	at org.gradle.execution.taskgraph.AbstractTaskPlanExecutor$TaskExecutorWorker.executeTask(AbstractTaskPlanExecutor.java:79)
-	at org.gradle.execution.taskgraph.AbstractTaskPlanExecutor$TaskExecutorWorker.processTask(AbstractTaskPlanExecutor.java:63)
-	at org.gradle.execution.taskgraph.AbstractTaskPlanExecutor$TaskExecutorWorker.run(AbstractTaskPlanExecutor.java:51)
-	at org.gradle.execution.taskgraph.DefaultTaskPlanExecutor$1.run(DefaultTaskPlanExecutor.java:33)
-	at org.gradle.internal.Factories$1.create(Factories.java:22)
-	at org.gradle.cache.internal.DefaultCacheAccess.longRunningOperation(DefaultCacheAccess.java:198)
-	at org.gradle.cache.internal.DefaultCacheAccess.longRunningOperation(DefaultCacheAccess.java:266)
-	at org.gradle.cache.internal.DefaultPersistentDirectoryStore.longRunningOperation(DefaultPersistentDirectoryStore.java:135)
-	at org.gradle.api.internal.changedetection.state.DefaultTaskArtifactStateCacheAccess.longRunningOperation(DefaultTaskArtifactStateCacheAccess.java:93)
-	at org.gradle.execution.taskgraph.DefaultTaskPlanExecutor.process(DefaultTaskPlanExecutor.java:31)
-	at org.gradle.execution.taskgraph.DefaultTaskGraphExecuter.execute(DefaultTaskGraphExecuter.java:86)
-	at org.gradle.execution.SelectedTaskExecutionAction.execute(SelectedTaskExecutionAction.java:29)
-	at org.gradle.execution.DefaultBuildExecuter.execute(DefaultBuildExecuter.java:61)
-	at org.gradle.execution.DefaultBuildExecuter.access$200(DefaultBuildExecuter.java:23)
-	at org.gradle.execution.DefaultBuildExecuter$2.proceed(DefaultBuildExecuter.java:67)
-	at org.gradle.execution.DryRunBuildExecutionAction.execute(DryRunBuildExecutionAction.java:32)
-	at org.gradle.execution.DefaultBuildExecuter.execute(DefaultBuildExecuter.java:61)
-	at org.gradle.execution.DefaultBuildExecuter.execute(DefaultBuildExecuter.java:54)
-	at org.gradle.initialization.DefaultGradleLauncher.doBuildStages(DefaultGradleLauncher.java:166)
-	at org.gradle.initialization.DefaultGradleLauncher.doBuild(DefaultGradleLauncher.java:113)
-	at org.gradle.initialization.DefaultGradleLauncher.run(DefaultGradleLauncher.java:81)
-	at org.gradle.launcher.exec.InProcessBuildActionExecuter$DefaultBuildController.run(InProcessBuildActionExecuter.java:64)
-	at org.gradle.launcher.cli.ExecuteBuildAction.run(ExecuteBuildAction.java:33)
-	at org.gradle.launcher.cli.ExecuteBuildAction.run(ExecuteBuildAction.java:24)
-	at org.gradle.launcher.exec.InProcessBuildActionExecuter.execute(InProcessBuildActionExecuter.java:35)
-	at org.gradle.launcher.exec.InProcessBuildActionExecuter.execute(InProcessBuildActionExecuter.java:26)
-	at org.gradle.launcher.cli.RunBuildAction.run(RunBuildAction.java:50)
-	at org.gradle.api.internal.Actions$RunnableActionAdapter.execute(Actions.java:171)
-	at org.gradle.launcher.cli.CommandLineActionFactory$ParseAndBuildAction.execute(CommandLineActionFactory.java:201)
-	at org.gradle.launcher.cli.CommandLineActionFactory$ParseAndBuildAction.execute(CommandLineActionFactory.java:174)
-	at org.gradle.launcher.cli.CommandLineActionFactory$WithLogging.execute(CommandLineActionFactory.java:170)
-	at org.gradle.launcher.cli.CommandLineActionFactory$WithLogging.execute(CommandLineActionFactory.java:139)
-	at org.gradle.launcher.cli.ExceptionReportingAction.execute(ExceptionReportingAction.java:33)
-	at org.gradle.launcher.cli.ExceptionReportingAction.execute(ExceptionReportingAction.java:22)
-	at org.gradle.launcher.Main.doAction(Main.java:46)
-	at org.gradle.launcher.bootstrap.EntryPoint.run(EntryPoint.java:45)
-	at org.gradle.launcher.Main.main(Main.java:37)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:497)
-	at org.gradle.launcher.bootstrap.ProcessBootstrap.runNoExit(ProcessBootstrap.java:50)
-	at org.gradle.launcher.bootstrap.ProcessBootstrap.run(ProcessBootstrap.java:32)
-	at org.gradle.launcher.GradleMain.main(GradleMain.java:23)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:497)
-	at org.gradle.wrapper.BootstrapMainStarter.start(BootstrapMainStarter.java:30)
-	at org.gradle.wrapper.WrapperExecutor.execute(WrapperExecutor.java:127)
-	at org.gradle.wrapper.GradleWrapperMain.main(GradleWrapperMain.java:58)
+  </channel> 
+</rss>
