@@ -17,9 +17,9 @@
 		<li class="dropdown">
           		<a data-toggle="dropdown" href="#">Topics<b class="caret"></b></a>
 		          <ul class="dropdown-menu" role="menu">
-				<li><a href="/blog/tags/tag.html">tag</a></li>
-				<li><a href="/blog/tags/java.html">java</a></li>
-				<li><a href="/blog/tags/TODO.html">TODO</a></li>
+				<li><a href="/blog/tags/Java.html">Java</a></li>
+				<li><a href="/blog/tags/Open-source.html">Open Source</a></li>
+				<li><a href="/blog/tags/Adobe.html">Adobe</a></li>
 		          </ul>
 	       </li>
                 <li><a href="/blog/${config.feed_file}">Feed</a></li>                
