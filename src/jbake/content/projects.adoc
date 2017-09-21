@@ -1,9 +1,0 @@
-= Projects
-Francois Le Droff
-2016-01-16
-:jbake-type: page
-:jbake-tags: projects, TODO
-:jbake-status: published
-:source-highlighter: prettify
-
-TODO
