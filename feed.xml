@@ -10,6 +10,20 @@
     <lastBuildDate>Fri, 22 Jan 2016 16:39:15 +0100</lastBuildDate>
 
     <item>
+      <title>Moved</title>
+      <link>http://francoisledroff.github.io/content/2017/09/20/moved.html</link>
+      <pubDate>Wed, 20 Sep 2017 00:00:00 +0200</pubDate>
+      <guid isPermaLink="false">content/2017/09/20/moved.html</guid>
+      <description>
+        &lt;div class=&quot;paragraph&quot;&gt;
+        &lt;p&gt;I just moved this blog from &lt;a href=&quot;http://francoisledroff.github.io/blog&quot; class=&quot;bare&quot;&gt;http://francoisledroff.github.io/blog&lt;/a&gt; to &lt;a href=&quot;http://francoisledroff.github.io&quot; class=&quot;bare&quot;&gt;http://francoisledroff.github.io&lt;/a&gt; .
+        So did the RSS feed.
+        &lt;/p&gt;
+        &lt;/div&gt;
+      </description>
+    </item>
+
+    <item>
       <title>An AEM/CQ SalesForce integration Sample</title>
       <link>http://francoisledroff.github.io/blog/content/2014/12/04/an_aem_cq_salesforce_integration.html</link>
       <pubDate>Thu, 4 Dec 2014 00:00:00 +0100</pubDate>
